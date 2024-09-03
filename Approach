@@ -1,0 +1,49 @@
+1 . ////////////////
+Here is my overall project overview for how it'll look like :The name of the project is ChatterBox . It's a real-time chat based application . Firstly , a user need to login in order to enter into the system database . But at first , the user needs to sign up . For this , email , password , FirstName , lastName are required . and when clicking upon next , the user will be redirected towards the 'verify email' section and the user is prompted to enter the code sent to the user's  respective email . If it is valid , then he'll be automatically logged into the system database as I told you before . so that's the system login and sign up process . What you think ? 
+
+
+2.//////////////////
+ok , let's go to sytem's dashboard after instant sign up successul . In right corner , the would be user which is defined by the firstname and lastname entered upon sign up (you remember:) ) . Let's not complicate , I will briefly mentioned components in right side : 1) username , set a status(current status like enjoying meal or sth underneath the user profile )  , notification bell and three dots which contains ( settings , switch Appearance , Sign out )  . Hence , the profile icon with profile name and its current status with notification and three dots are all in alighnments in top right corner okay . Beneath , these , there is chats section followed by NewChat , Search Chats (by People , groups )  and Recent Chats   and each Username which is connected to the user is connected are placed in the chats section with their icon , name , and  a favorite button . So I will explain , settings , new chats  and recent chats in further conversation . But these are in the right side of the chat dashboard . and beneatch the recent chats , I will have the name of the chats like Bruce Jags and upon clicking it , I can chat one-to-one converstation and same for group as well . 
+
+
+
+3./////////////
+Let's move to the main part i.e , message section . For example , I need to message to the markGrey , in top section , there will be the user's profile like MG (its symbol ) like in skype :) , its Name and in left corner , there will be again three dots (conversation information , I will explain it later ) . The message section will consists of message bar ('Type a message (with emoji option ) ') , gallery(to add media and files ) , voice clips , and GIF . That's it , this is the complete dashboard . Although , it will consist of the three tabs I told you ( conversation information upon each chat ) . 
+
+
+4.////////////////
+Hidden ... (three dots ) in chats sections upon hovering to the chats (left side of the dashboard in the chats section ) . Under clicking it : options like : a) mark and unread b) mute notification c) archive chat d) Delete chat .
+
+5.////////////////
+New Chat >  : (Left side of the dashboard sided with Chats section ) . It will consists of a) New Group Chat  b) New Chat (Which will make user search by people or group and then start chat message ) c) New Private conversation (This will be end-to-end encryption message ) . 
+
+
+
+
+6.////////////
+Recent Chats > : This section will use feature to display chats by a) sort by Time b) Sort by Unread c) Hide Favorites(Remember I included 'favorites' star to each chats !) 
+
+
+
+7.//////////
+'Set a status' : (Just below the profile section ) of the user :  I will display a ui to 'share what you're up to ....... " and post . 
+
+
+8.///////////
+Settings :      a) Account :  i. Profile Picture (change/upload section )   ii. Email (current email details used by the user )   iii. Active Status : On /Off    b) General   i. Language   English(us)  -> change   c) Chat Settings     i. Archived Chats  ii. Blocked Users      d) Notifications   i. Chat nofitication (on/off)   ii. Mute Notifications (view) 
+
+
+
+
+9.//////////////
+(...) Conversation Information : (Right corner of the message section ) : It will consist of user logo like (BS) and its name Bruce Sam  and below it will consists of these sections : 1) Chat History (Tabs : All time , This week , This month ) and will display the chat history between the conversation  2) Customize Chat  (tabs:  Change theme , Edit Nicknames )      3) Media & files   ( This will open up  a ui which will contains two tabs (media and files ) and upon clicking , it will display media if on media and files shared on the conversation if clicked on files . 
+
+
+
+10./////////////
+I forgot to tell you . But as soon as I am signed up and entered to the database , there will be no any user's to chat for right ? I want to display a section to upload user photo (which can be skipped and continue ) and then only show the dashboard with no any chats but says : Welcome to ChatterBox  with the username and (share Profile ) button to share the url in other platform . And says : 'You are signed in as ....@gmail.com  ....   . Clear ? 
+
+
+
+11.//////////////
+Message section : upon message , it will display date like (today / yestarday / normal date ) and then message like ('hello' ) . In the top of hello , it will display , the time the message was sent and follwed by it will show up with three dots ( edit , copy , reply , forward , and remove ) . And also , it will show up message status like sent , delivered and read . 

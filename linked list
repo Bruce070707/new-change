@@ -1,0 +1,318 @@
+ **********************ARRAY IMPLEMETATION OF THE LINKED LIST ****************
+
+    Create a class Node with members data and next.
+    Implement a constructor to initialize data and set next to NULL.
+    Define a function convertarr2LL that takes a vector arr as input.
+    Initialize headNode_pointer with a new Node using the first element of arr.
+    Set mover to headNode_pointer.
+    Loop through the array from the second element to the end:
+        Create a new Node with the current element.
+        Set mover->next to the new node.
+        Update mover to the new node.
+    Return headNode_pointer.
+
+
+*******************SINGLY LINKED LIST 
+
+////Insertion from beginning 
+
+1. Create a class  with data members (to store the node's value) and `next` (to point to the next node).
+
+2. Define a function  that takes a value and the head of the linked list as parameters.
+
+3. Create a new node with the given value.
+
+6. If the linked list is empty (head is `NULL`), set the newly created node as the head of the linked list.
+
+4. Set the `next` of the newly created node to point to the current head of the linked list.
+
+5. Update the head of the linked list to be the newly created node.
+
+
+//Insertion from tail 
+
+- Create a class with members (to store the node's value) and `next` (to point to the next node).
+
+- Define a function that takes a value and a reference to the head of the linked list (`head`) as parameters.
+
+- Create a new node with the given value.
+
+- If the linked list is empty (`head` is `NULL`):
+    - Set `head` to newnode , making it the head of the linked list.
+
+- If the linked list is not empty:
+    - Initialize a pointer `temp' to `head`.
+    - Traverse through the linked list using a loop until `temp->next` is `NULL`.
+
+- Once `temp` points to the last node (`temp->next` is `NULL`):
+    - Set `temp->next` to `temp` to link the new node at the end of the list.
+
+- Return `head`, which now points to the beginning of the linked list with the new node added at the end.
+
+
+Deletion from Beginning
+
+    Define ListNode Class:
+        Create a class ListNode with members val (to store the node's value) and next (to point to the next node).
+
+    Define DeleteAtFirst Function:
+        Define a function DeleteAtFirst that takes the head of the linked list as a parameter.
+
+    Check if Linked List is Empty:
+        If the linked list is empty (head is NULL):
+            Return NULL or handle the deletion accordingly based on the requirement.
+
+    Update Head Pointer:
+        If the linked list is not empty:
+            Store the current head in a temporary pointer.
+            Update head to point to head->next.
+            Delete the temporary pointer (optional depending on memory management).
+
+    Return the Updated Head:
+        Return head after deletion.
+
+Deletion from End
+
+    Define ListNode Class:
+        Create a class ListNode with members val (to store the node's value) and next (to point to the next node).
+
+    Define DeleteAtEnd Function:
+        Define a function DeleteAtEnd that takes the head of the linked list as a parameter.
+
+    Check if Linked List is Empty:
+        If the linked list is empty (head is NULL):
+            Return NULL or handle the deletion accordingly based on the requirement.
+
+    Traverse to the Second Last Node:
+        If the linked list is not empty:
+            Initialize two pointers: current pointing to head and previous initialized to NULL.
+            Traverse through the linked list until current->next is NULL, updating previous to current and current to current->next.
+
+    Delete the Last Node:
+        Once the loop exits (current->next is NULL), previous points to the second last node.
+        Set previous->next to NULL to disconnect the last node from the linked list.
+        Delete the last node (optional depending on memory management).
+
+    Return the Updated Head:
+        Return head after deletion.
+
+
+************************Circular singly linked list
+
+### Insertion at Beginning
+
+1. **Create a class `Node` with `data` and `next` members to represent a node in the linked list.**
+
+2. **Define a function `insertAtFirst` in the `circularSinglyLL` class that takes `data1` as a parameter.**
+
+3. **Create a new node (`newnode`) with `data1`.**
+
+4. **Check if `head` is `nullptr` (empty list):**
+   - Set `head` to `newnode`.
+   - Set `newnode->next` to point back to `head` to maintain circularity.
+
+5. **If the list is not empty:**
+   - Traverse to the last node (`temp`) using a loop until `temp->next` is `head`.
+   - Set `newnode->next` to `head`.
+   - Update `head` to `newnode`.
+   - Set `temp->next` to `head` to complete the circle.
+
+### Insertion at End
+
+1. **Define a function `insertAtEnd` in the `circularSinglyLL` class that takes `data1` as a parameter.**
+
+2. **Create a new node (`newnode`) with `data1`.**
+
+3. **Check if `head` is `nullptr` (empty list):**
+   - Set `head` to `newnode`.
+   - Set `newnode->next` to point back to `head` to maintain circularity.
+
+4. **If the list is not empty:**
+   - Traverse to the last node (`temp`) using a loop until `temp->next` is `head`.
+   - Set `temp->next` to `newnode`.
+   - Set `newnode->next` to `head` to maintain circularity.
+
+### Deletion from Beginning
+
+1. **Define a function `deleteFromFirst` in the `circularSinglyLL` class.**
+
+2. **Check if `head` is `nullptr` (empty list):**
+   - Print "List is empty" and return.
+
+3. **If there is only one node (`head->next` is `head`):**
+   - Delete `head`.
+   - Set `head` to `nullptr`.
+
+4. **If there are multiple nodes:**
+   - Traverse to the last node (`temp`) using a loop until `temp->next` is `head`.
+   - Update `temp->next` to `head->next` to skip the first node.
+   - Store `head` in `delnode`.
+   - Update `head` to `head->next`.
+   - Delete `delnode`.
+
+### Deletion from End
+
+1. **Define a function `deleteFromEnd` in the `circularSinglyLL` class.**
+
+2. **Check if `head` is `nullptr` (empty list):**
+   - Print "List is empty" and return.
+
+3. **If there is only one node (`head->next` is `head`):**
+   - Delete `head`.
+   - Set `head` to `nullptr`.
+
+4. **If there are multiple nodes:**
+   - Initialize `temp` to `head` and `prev` to `nullptr`.
+   - Traverse to the last node (`temp`) using a loop until `temp->next` is `head`.
+   - Update `prev` to `temp`.
+   - Update `temp` to `temp->next`.
+   - Set `prev->next` to `head` to remove `temp` from the circle.
+   - Delete `temp`.
+
+
+*********************** doubly linked list and doubly circular linked list:
+
+### Doubly Linked List
+
+#### Insertion at Beginning
+
+1. **Create a class `Node` with `data`, `prev`, and `next` members to represent a node in the doubly linked list.**
+
+2. **Define a function `insertAtFirst` in the doubly linked list class that takes `data1` as a parameter.**
+
+3. **Create a new node (`newnode`) with `data1`.**
+
+4. **Check if `head` is `nullptr` (empty list):**
+   - Set `head` and `tail` to `newnode`.
+   - Set both `newnode->prev` and `newnode->next` to `nullptr`.
+
+5. **If the list is not empty:**
+   - Set `newnode->next` to current `head`.
+   - Set `head->prev` to `newnode`.
+   - Update `head` to `newnode`.
+   - Set `newnode->prev` to `nullptr`.
+
+#### Insertion at End
+
+1. **Define a function `insertAtEnd` in the doubly linked list class that takes `data1` as a parameter.**
+
+2. **Create a new node (`newnode`) with `data1`.**
+
+3. **Check if `head` is `nullptr` (empty list):**
+   - Set `head` and `tail` to `newnode`.
+   - Set both `newnode->prev` and `newnode->next` to `nullptr`.
+
+4. **If the list is not empty:**
+   - Set `newnode->prev` to current `tail`.
+   - Set `tail->next` to `newnode`.
+   - Update `tail` to `newnode`.
+   - Set `newnode->next` to `nullptr`.
+
+#### Deletion from Beginning
+
+1. **Define a function `deleteFromFirst` in the doubly linked list class.**
+
+2. **Check if `head` is `nullptr` (empty list):**
+   - Print "List is empty" and return.
+
+3. **If there is only one node (`head == tail`):**
+   - Delete `head`.
+   - Set `head` and `tail` to `nullptr`.
+
+4. **If there are multiple nodes:**
+   - Store `head` in `delnode`.
+   - Update `head` to `head->next`.
+   - Set `head->prev` to `nullptr`.
+   - Delete `delnode`.
+
+#### Deletion from End
+
+1. **Define a function `deleteFromEnd` in the doubly linked list class.**
+
+2. **Check if `head` is `nullptr` (empty list):**
+   - Print "List is empty" and return.
+
+3. **If there is only one node (`head == tail`):**
+   - Delete `head`.
+   - Set `head` and `tail` to `nullptr`.
+
+4. **If there are multiple nodes:**
+   - Store `tail` in `delnode`.
+   - Update `tail` to `tail->prev`.
+   - Set `tail->next` to `nullptr`.
+   - Delete `delnode`.
+
+### Doubly Circular Linked List
+
+#### Insertion at Beginning
+
+1. **Create a class `Node` with `data`, `prev`, and `next` members to represent a node in the doubly circular linked list.**
+
+2. **Define a function `insertAtFirst` in the doubly circular linked list class that takes `data1` as a parameter.**
+
+3. **Create a new node (`newnode`) with `data1`.**
+
+4. **Check if `head` is `nullptr` (empty list):**
+   - Set `head` and `tail` to `newnode`.
+   - Set `newnode->prev` and `newnode->next` to `newnode` to create circularity.
+
+5. **If the list is not empty:**
+   - Set `newnode->next` to current `head`.
+   - Set `newnode->prev` to `tail`.
+   - Set `head->prev` to `newnode`.
+   - Update `head` to `newnode`.
+
+#### Insertion at End
+
+1. **Define a function `insertAtEnd` in the doubly circular linked list class that takes `data1` as a parameter.**
+
+2. **Create a new node (`newnode`) with `data1`.**
+
+3. **Check if `head` is `nullptr` (empty list):**
+   - Set `head` and `tail` to `newnode`.
+   - Set `newnode->prev` and `newnode->next` to `newnode` to create circularity.
+
+4. **If the list is not empty:**
+   - Set `newnode->prev` to current `tail`.
+   - Set `newnode->next` to `head`.
+   - Set `tail->next` to `newnode`.
+   - Update `tail` to `newnode`.
+
+#### Deletion from Beginning
+
+1. **Define a function `deleteFromFirst` in the doubly circular linked list class.**
+
+2. **Check if `head` is `nullptr` (empty list):**
+   - Print "List is empty" and return.
+
+3. **If there is only one node (`head->next == head`):**
+   - Delete `head`.
+   - Set `head` and `tail` to `nullptr`.
+
+4. **If there are multiple nodes:**
+   - Store `head` in `delnode`.
+   - Update `head` to `head->next`.
+   - Set `head->prev` to `tail`.
+   - Set `tail->next` to `head`.
+   - Delete `delnode`.
+
+#### Deletion from End
+
+1. **Define a function `deleteFromEnd` in the doubly circular linked list class.**
+
+2. **Check if `head` is `nullptr` (empty list):**
+   - Print "List is empty" and return.
+
+3. **If there is only one node (`head->next == head`):**
+   - Delete `head`.
+   - Set `head` and `tail` to `nullptr`.
+
+4. **If there are multiple nodes:**
+   - Store `tail` in `delnode`.
+   - Update `tail` to `tail->prev`.
+   - Set `tail->next` to `head`.
+   - Set `head->prev` to `tail`.
+   - Delete `delnode`.
+
+
+
