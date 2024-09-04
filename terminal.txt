@@ -1,0 +1,94 @@
+ ethan@7  ~   master ±  ~/.ssh/config
+zsh: permission denied: /home/ethan/.ssh/config
+ ✘ ethan@7  ~   master ±  nano ~/.ssh/config
+ ethan@7  ~   master ±  git remote-v
+git: 'remote-v' is not a git command. See 'git --help'.
+
+The most similar command is
+	remote-fd
+ ✘ ethan@7  ~   master ±  cd Desktop/Raaj 
+ ethan@7  ~/Desktop/Raaj   main  git remote-v
+git: 'remote-v' is not a git command. See 'git --help'.
+
+The most similar command is
+	remote-fd
+ ✘ ethan@7  ~/Desktop/Raaj   main  git remote -v
+origin	git@github-bruce:Bruce070707/new-repo.git (fetch)
+origin	git@github-bruce:Bruce070707/new-repo.git (push)
+ ethan@7  ~/Desktop/Raaj   main  git config --global user.name "Bruce070707"
+git config --global user.email "stonesjohn278@example.com"
+
+ ethan@7  ~/Desktop/Raaj   main  git config --global user.name 
+git config --global user.email
+
+Bruce070707
+stonesjohn278@example.com
+ ethan@7  ~/Desktop/Raaj   main  nano ~/.ssh/config
+ ethan@7  ~/Desktop/Raaj   main  git init
+Reinitialized existing Git repository in /home/ethan/Desktop/Raaj/.git/
+ ethan@7  ~/Desktop/Raaj   main  git remote add origin git@github-bruce:Bruce070707/new-change.git
+error: remote origin already exists.
+ ✘ ethan@7  ~/Desktop/Raaj   main  git add .
+ ethan@7  ~/Desktop/Raaj   main  git commit -m "initial commit by Bruce0780807"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+ ✘ ethan@7  ~/Desktop/Raaj   main  git pull origin main      ERROR: Repository not found.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+ ✘ ethan@7  ~/Desktop/Raaj   main  >....                      
+
+ ✘ ethan@7  ~/Desktop/Raaj   main  git remote remove origin
+ ethan@7  ~/Desktop/Raaj   main  git remote add origin git@github-bruce:Bruce070707/new-change.git
+ ethan@7  ~/Desktop/Raaj   main  git pull origin main
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 860 bytes | 430.00 KiB/s, done.
+From github-bruce:Bruce070707/new-change
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> origin/main
+fatal: refusing to merge unrelated histories
+ ✘ ethan@7  ~/Desktop/Raaj   main  git pull origin main --allow-unrelated-histories
+From github-bruce:Bruce070707/new-change
+ * branch            main       -> FETCH_HEAD
+Auto-merging README.md
+CONFLICT (add/add): Merge conflict in README.md
+Automatic merge failed; fix conflicts and then commit the result.
+ ✘ ethan@7  ~/Desktop/Raaj   main ±✚ >M<  git stage
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+ ethan@7  ~/Desktop/Raaj   main ±✚ >M<  git state
+git: 'state' is not a git command. See 'git --help'.
+
+The most similar command is
+	stage
+ ✘ ethan@7  ~/Desktop/Raaj   main ±✚ >M<  git status
+On branch main
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+	both added:      README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+ ethan@7  ~/Desktop/Raaj   main ±✚ >M<  git add .
+ ethan@7  ~/Desktop/Raaj   main ✚ >M<  git commit -m "by bruce"
+[main a344cbb] by bruce
+ ethan@7  ~/Desktop/Raaj   main  git push origin main 
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (12/12), 5.73 KiB | 5.73 MiB/s, done.
+Total 12 (delta 0), reused 0 (delta 0), pack-reused 0
+To github-bruce:Bruce070707/new-change.git
+   58e1ddd..a344cbb  main -> main
+ ethan@7  ~/Desktop/Raaj   main  
